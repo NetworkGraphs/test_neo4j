@@ -20,5 +20,6 @@ Load Json
 
 Match all nodes
 - https://neo4j.com/docs/cypher-manual/4.4/clauses/match/#get-all-nodes
- Browser Styling
+
+Browser Styling
  - https://neo4j.com/docs/browser-manual/current/operations/browser-styling/
