@@ -1,0 +1,307 @@
+﻿[
+  {
+    "n": {
+      "identity": 0,
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "tagline": "Welcome to the Real World",
+        "title": "The Matrix",
+        "released": 1999
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 1,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1964,
+        "name": "Keanu Reeves"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 2,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1967,
+        "name": "Carrie-Anne Moss"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1961,
+        "name": "Laurence Fishburne"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 4,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 5,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1967,
+        "name": "Andy Wachowski"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 6,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1965,
+        "name": "Lana Wachowski"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 7,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1952,
+        "name": "Joel Silver"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 8,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1978,
+        "name": "Emil Eifrem"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 9,
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "tagline": "Free your mind",
+        "title": "The Matrix Reloaded",
+        "released": 2003
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "tagline": "Everything that has a beginning has an end",
+        "title": "The Matrix Revolutions",
+        "released": 2003
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 11,
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "tagline": "Evil has its winning ways",
+        "title": "The Devil's Advocate",
+        "released": 1997
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 12,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1975,
+        "name": "Charlize Theron"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1940,
+        "name": "Al Pacino"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 14,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1944,
+        "name": "Taylor Hackford"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "tagline": "In the heart of the nation's capital, in a courthouse of the U.S. government, one man will stop at nothing to keep his honor, and one will stop at nothing to find the truth.",
+        "title": "A Few Good Men",
+        "released": 1992
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1962,
+        "name": "Tom Cruise"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1937,
+        "name": "Jack Nicholson"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1962,
+        "name": "Demi Moore"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1958,
+        "name": "Kevin Bacon"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1966,
+        "name": "Kiefer Sutherland"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1971,
+        "name": "Noah Wyle"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1968,
+        "name": "Cuba Gooding Jr."
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1957,
+        "name": "Kevin Pollak"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "Person"
+      ],
+      "properties": {
+        "born": 1943,
+        "name": "J.T. Walsh"
+      }
+    }
+  }
+]

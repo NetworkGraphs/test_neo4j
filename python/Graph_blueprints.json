@@ -1,0 +1,73 @@
+{
+    "edges_nodes_id":"name",
+    "nodes": [
+        {
+            "name": "lop",
+            "lang": "java",
+            "_label": "Program"
+        },
+        {
+            "name": "vadas",
+            "age": 27,
+            "_label": "Person"
+        },
+        {
+            "name": "marko",
+            "age": 29,
+            "_label": "Person"
+        },
+        {
+            "name": "peter",
+            "age": 35,
+            "_label": "Person"
+        },
+        {
+            "name": "ripple",
+            "lang": "java",
+            "_label": "Program"
+        },
+        {
+            "name": "josh",
+            "age": 32,
+            "_label": "Person"
+        }
+    ],
+    "edges": [
+        {
+            "weight": 1,
+            "_out": "josh",
+            "_in": "ripple",
+            "_label": "created"
+        },
+        {
+            "weight": 0.5,
+            "_out": "marko",
+            "_in": "vadas",
+            "_label": "knows"
+        },
+        {
+            "weight": 0.4,
+            "_out": "marko",
+            "_in": "lop",
+            "_label": "created"
+        },
+        {
+            "weight": 1,
+            "_out": "marko",
+            "_in": "josh",
+            "_label": "knows"
+        },
+        {
+            "weight": 0.4,
+            "_out": "josh",
+            "_in": "lop",
+            "_label": "created"
+        },
+        {
+            "weight": 0.2,
+            "_out": "peter",
+            "_in": "lop",
+            "_label": "created"
+        }
+    ]
+}

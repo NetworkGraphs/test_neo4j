@@ -10,6 +10,10 @@ show databases
 MATCH (n)
 RETURN n
 
+//delete all
+MATCH (n)
+DETACH DELETE n
+
 //or simply
 match(n) return n
 
