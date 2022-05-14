@@ -23,6 +23,10 @@ list of plugins
 
 Browser Styling
 - https://neo4j.com/docs/browser-manual/current/operations/browser-styling/
+```cmd
+:style
+:style 'file:///style.grass'
+```
 ## Cypher
 manual
 - https://neo4j.com/docs/cypher-manual/4.4/introduction/
@@ -41,6 +45,16 @@ project params
 FastRP and kNN example
 - https://neo4j.com/docs/graph-data-science/current/end-to-end-examples/fastrp-knn-example/
 
+## Python
+- limitations (No Numeric utility, no Cypher on GDS on Python) https://neo4j.com/docs/graph-data-science/current/python-client/known-limitations/
+- mapping Cypher / Python : https://neo4j.com/docs/graph-data-science/current/python-client/getting-started/#python-client-getting-started-mapping
+
+```shell
+sudo apt install python3.8-venv
+sudo apt install python3-pip
+python3 -m venv venv
+source venv/bin/activate
+```
 ## Bloom
 bloom on docker only for enterprise edition with license as docker param
 - https://neo4j.com/docs/bloom-user-guide/current/bloom-installation/advanced-installation/#bloom-docker

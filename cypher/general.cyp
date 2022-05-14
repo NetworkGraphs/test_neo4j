@@ -16,3 +16,7 @@ match(n) return n
 //meta gaph
 call apoc.meta.graph
 
+//gds
+RETURN gds.version()
+
+CALL gds.list()
