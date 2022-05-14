@@ -21,6 +21,8 @@ install
 list of plugins
 - https://neo4j.com/docs/operations-manual/current/docker/operations/#docker-neo4jlabs-plugins
 
+Browser Styling
+- https://neo4j.com/docs/browser-manual/current/operations/browser-styling/
 ## Cypher
 manual
 - https://neo4j.com/docs/cypher-manual/4.4/introduction/
@@ -42,4 +44,6 @@ FastRP and kNN example
 ## Bloom
 bloom on docker only for enterprise edition with license as docker param
 - https://neo4j.com/docs/bloom-user-guide/current/bloom-installation/advanced-installation/#bloom-docker
+
+
 
