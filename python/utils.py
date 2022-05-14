@@ -15,7 +15,7 @@ def load_file(filename):
         return file.read()
 
 def save_file(fileName,data):
-    data_file = open(fileName, "w")
+    data_file = open(fileName, "wb")
     data_file.write(data.encode("utf-8"))
     data_file.close()
     print(f"{len(data)} bytes saved in {fileName}")

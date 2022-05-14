@@ -1,3 +1,28 @@
+from neo4j import GraphDatabase
+
+driver = None
+
+def open(host,user,passwd):
+    global driver
+    driver = GraphDatabase.driver(host, auth=(user, passwd))
+    return
+
+def close():
+    driver.close()
+    return
+
+def cypher(cmd):
+    def transaction(tx,cypher_cmd):
+        result = tx.run(cypher_cmd)
+        ret = result.single()
+        if(ret is None):
+            return None
+        else:
+            return ret[0]
+    with driver.session() as session:
+        result = session.write_transaction(transaction, cmd)
+        if(result is not None):
+            return result
 
 def run(driver,cypher_cmd):
     def transaction(tx,cypher_cmd):
