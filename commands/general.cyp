@@ -13,3 +13,6 @@ RETURN n
 //or simply
 match(n) return n
 
+//meta gaph
+call apoc.meta.graph
+
