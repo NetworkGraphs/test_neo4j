@@ -20,3 +20,4 @@ call apoc.meta.graph
 RETURN gds.version()
 
 CALL gds.list()
+CALL gds.graph.list()

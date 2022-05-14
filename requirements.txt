@@ -2,3 +2,4 @@ graphdatascience
 neo4j
 pandas
 numpy
+jupyterlab
