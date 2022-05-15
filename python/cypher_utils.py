@@ -37,7 +37,7 @@ def run(driver,cypher_cmd):
         if(result is not None):
             return result
 
-def json_to_cypher(json_graph):
+def json_nodes_edges_to_cypher(json_graph):
     uid = json_graph["edges_nodes_id"]
     cmd = "CREATE "
     for n in json_graph["nodes"]:
@@ -70,5 +70,40 @@ def json_to_cypher(json_graph):
             prop_count += 1
         cmd += f"\n ({e['_out']})-[:{e['_label']} {{{props}}}]->({e['_in']}),"
         
+    cmd = cmd[:-1]+";"
+    return cmd
+
+def stringify_props(name,node,packed_json):
+    props = f"name:'{name}'"
+    for key,prop_val in node.items():
+        if(key in packed_json):#This is a relationship not a property, so skip in node creation
+            continue
+        if(type(node[key]) == str):
+            props += f", {key}:'{node[key]}'"
+        else:
+            props += f", {key}:{node[key]}"
+    return props
+
+def stringify_relations(name,node,packed_json):
+    relations = ""
+    for key,prop_val in node.items():
+        if(key in packed_json):
+            assert(isinstance(prop_val,list))
+            for target in prop_val:
+                relations += f"\n (`{name}`)-[:relatesto]->(`{target}`),"
+    return relations
+    
+
+def json_packed_to_cypher(packed_json):
+    cmd = "CREATE "
+    #Nodes
+    for Label,Labels_map in packed_json.items():
+        for name,node in Labels_map.items():
+            props = stringify_props(name,node,packed_json)
+            cmd += f"\n (`{name}`:{Label} {{{props}}}),"
+    #Relationships
+    for Label,Labels_map in packed_json.items():
+        for name,node in Labels_map.items():
+            cmd += stringify_relations(name,node,packed_json)
     cmd = cmd[:-1]+";"
     return cmd
