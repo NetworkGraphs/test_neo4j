@@ -5,9 +5,9 @@ The goal is then to provide utilities that can convers multiple json formats tha
 
 ![json formats](./json%20formats.svg)
 
-* jsonl : json lines is very effitient when it comes to scale as every line can be processed separately without loasing the whole file in memory, such scale is outside of scope of this repo that targets applications that fit and can be processed in memory.
-* neo4j ids : althoug neo4j db has a unique id among all Lebel types, within the export, every Label has its own id scope, therefore when referencing a target within edges, the label has to be provided as well.
-* no ids : json data exchanged between applications should not contain app specific number ids because the import or append in an existing database will require assignment of new ids. Additionally, data created manually by users or other apps requires an additional effort to add those ids.
+* jsonl : json lines is very effitient when it comes to scale as every line can be processed separately without loading the whole file in memory, such scale is outside of scope of this repo that targets applications that fit and can be processed in memory.
+* neo4j ids : althoug neo4j db has a unique id among all Label types, within the export, every Label has its own id scope, that's why when referencing a target within edges, the label has to be provided as well.
+* no ids : json data exchanged between applications should not contain app specific number ids because the import or append in an existing database will require assignment of new ids. Additionally, data created manually by users or other apps requires an additional effort to add those ids. Those ids are also meaningless to the nodes information and can clutter it
 * unique ids : The scope of these loading utilities is to deal with data where all members of every group can be uniquely identified with one of their properties that is human comprehensible such as name. If such a restriction is not possible, then a custom cypher will have to be written and automated json load cannot be used without given uids. Note that the  name is used by neo4j as a Label (Text visualization) neo4j reserves the Label for the type and uses name instead.
 * uid maps, no lists : every group of data should be structured in a map, not a list, where the uid is used as a key
 * Labels are the terms used by neo4j for node types. inported data will not take advantage of multi typing capabilities of neo4j. Fallback on a single type allows to pack all data of the same type in a map where the key is the type of the nodes
