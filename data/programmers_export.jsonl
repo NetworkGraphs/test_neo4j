@@ -1,0 +1,12 @@
+{"type":"node","id":"1","labels":["Program"],"properties":{"name":"lop","lang":"java"}}
+{"type":"node","id":"2","labels":["Person"],"properties":{"name":"vadas","age":27}}
+{"type":"node","id":"3","labels":["Person"],"properties":{"name":"marko","age":29}}
+{"type":"node","id":"4","labels":["Person"],"properties":{"name":"peter","age":35}}
+{"type":"node","id":"5","labels":["Program"],"properties":{"name":"ripple","lang":"java"}}
+{"type":"node","id":"6","labels":["Person"],"properties":{"name":"josh","age":32}}
+{"id":"0","type":"relationship","label":"created","properties":{"weight":1},"start":{"id":"6","labels":["Person"]},"end":{"id":"5","labels":["Program"]}}
+{"id":"1","type":"relationship","label":"knows","properties":{"weight":0.5},"start":{"id":"3","labels":["Person"]},"end":{"id":"2","labels":["Person"]}}
+{"id":"2","type":"relationship","label":"created","properties":{"weight":0.4},"start":{"id":"3","labels":["Person"]},"end":{"id":"1","labels":["Program"]}}
+{"id":"3","type":"relationship","label":"knows","properties":{"weight":1},"start":{"id":"3","labels":["Person"]},"end":{"id":"6","labels":["Person"]}}
+{"id":"4","type":"relationship","label":"created","properties":{"weight":0.4},"start":{"id":"6","labels":["Person"]},"end":{"id":"1","labels":["Program"]}}
+{"id":"5","type":"relationship","label":"created","properties":{"weight":0.2},"start":{"id":"4","labels":["Person"]},"end":{"id":"1","labels":["Program"]}}

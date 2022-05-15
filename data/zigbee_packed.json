@@ -1,0 +1,209 @@
+{
+  "Coordinators":{
+    "lzig":{
+      "hostname": "lifo",
+      "zigbee_channel": 13,
+      "Devices":[
+        "power lifo",
+        "coord lifo",
+        "living heat",
+        "office window right",
+        "office window left",
+        "office weather",
+        "office switch",
+        "bedroom window",
+        "kitchen window",
+        "power router",
+        "bathroom heat",
+        "kitchen heat",
+        "tv button",
+        "bedroom heat"
+      ]
+    },
+    "mzig":{
+      "hostname": "mano",
+      "zigbee_channel": 26,
+      "Devices":[
+        "mano power",
+        "floody",
+        "desk motion",
+        "cube",
+        "bed light button",
+        "bed weather",
+        "balcony weather",
+        "balcony window left",
+        "balcony window right",
+        "balcony door",
+        "tree button",
+        "bed nic button",
+        "bathroom fan button",
+        "pc button",
+        "bed heat button",
+        "office heat",
+        "office chair vibration",
+        "cupboard light"
+      ]
+    }
+  },
+  "Rooms":{
+    "bedroom":{
+      "Devices":[
+        "bed light button",
+        "bed weather",
+        "bed nic button",
+        "bed heat button",
+        "bedroom window",
+        "bedroom heat"
+      ]
+    },
+    "balcony":{
+      "Devices":[
+        "balcony weather"
+      ]
+    },
+    "livingroom":{
+      "Devices":[
+        "balcony window left",
+        "balcony window right",
+        "balcony door",
+        "coord lifo",
+        "living heat",
+        "tv button"
+      ]
+    },
+    "bathroom":{
+      "Devices":[
+        "floody",
+        "bathroom fan button",
+        "bathroom heat"
+      ]
+    },
+    "office":{
+      "Devices":[
+        "desk motion",
+        "cube",
+        "tree button",
+        "pc button",
+        "office heat",
+        "office chair vibration",
+        "office window right",
+        "office window left",
+        "office weather",
+        "office switch"
+      ]
+    },
+    "hallway":{
+      "Devices":[
+        "mano power",
+        "cupboard light",
+        "power lifo",
+        "power router"
+      ]
+    },
+    "kitchen":{
+      "Devices":[
+        "kitchen window",
+        "kitchen heat"
+      ]
+     }
+  },
+  "Devices": 
+  {
+    "mano power":{
+      "mac": "0x00124b001d4a012d"
+    },
+    "floody":{
+      "mac": "0x00158d000255fb8b"
+    },
+    "desk motion":{
+      "mac": "0x00158d0002a4f61e"
+    },
+    "cube":{
+      "mac": "0x00158d00028f8531"
+    },
+    "bed light button":{
+      "mac": "0x00158d0001ef6374"
+    },
+    "bed weather":{
+      "mac": "0x00158d00026ecd6a"
+    },
+    "balcony weather":{
+      "mac": "0x00158d000237df83"
+    },
+    "balcony window left":{
+      "mac": "0x00158d000272623b"
+    },
+    "balcony window right":{
+      "mac": "0x00158d0002760208"
+    },
+    "balcony door":{
+      "mac": "0x00158d0002518c83"
+    },
+    "tree button":{
+      "mac": "0x00158d0001eb81c7"
+    },
+    "bed nic button":{
+      "mac": "0x00158d00029078a2"
+    },
+    "bathroom fan button":{
+      "mac": "0x00158d0002a2c21c"
+    },
+    "pc button":{
+      "mac": "0x00158d0001eb8fc9"
+    },
+    "bed heat button":{
+      "mac": "0x00158d0001e7a12b"
+    },
+    "office heat":{
+      "mac": "0x00158d0001922d22"
+    },
+    "office chair vibration":{
+      "mac": "0x00158d0002a4f51d"
+    },
+    "cupboard light":{
+      "mac": "0x000d6ffffe9ccd6a"
+    },
+    "power lifo":{
+      "mac": "0x00124b001d4a014b"
+    },
+    "coord lifo":{
+      "mac": "0x00124b0018ed23a5"
+    },
+    "living heat":{
+      "mac": "0x00158d000192dd3e"
+    },
+    "office window right":{
+      "mac": "0x00158d0004240973"
+    },
+    "office window left":{
+      "mac": "0x00158d0004237aad"
+    },
+    "office weather":{
+      "mac": "0x00158d0002476b04"
+    },
+    "office switch":{
+      "mac": "0x00158d00028f7fb5"
+    },
+    "bedroom window":{
+      "mac": "0x00158d00041a3bfe"
+    },
+    "kitchen window":{
+      "mac": "0x00158d00041a3b31"
+    },
+    "power router":{
+      "mac": "0x00124b001c2f1279"
+    },
+    "bathroom heat":{
+      "mac": "0x00158d0001922d10"
+    },
+    "kitchen heat":{
+      "mac": "0x00158d0001922ce9"
+    },
+    "tv button":{
+      "mac": "0xccccccfffee20ebd"
+    },
+    "bedroom heat":{
+      "mac": "0x00158d0001922d4f"
+    }
+  }
+}

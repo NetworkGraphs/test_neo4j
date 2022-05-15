@@ -1,0 +1,17 @@
+{
+    "Persons":{
+        "Michael":{
+            "age": 41,
+            "children":{
+                "Persons":[
+                    "Selina",
+                    "Rana",
+                    "Selma"
+                ]
+            }
+        },
+        "Selina":{},
+        "Rana":{},
+        "Selma":{}
+    }
+}

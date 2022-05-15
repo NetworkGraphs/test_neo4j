@@ -1,0 +1,13 @@
+[
+    {
+      "start":"Coordinators",
+      "end":"Devices",
+      "label":"coordinates"
+    },
+    {
+      "start":"Rooms",
+      "end":"Devices",
+      "label":"contains"
+    }
+  ]
+  

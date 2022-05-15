@@ -1,0 +1,67 @@
+{
+  "_relationships":[
+    {
+      "start":"Labels1",
+      "end":"Labels2",
+      "label":"rel_action"
+    },
+    {
+      "start":"Labels2",
+      "end":"Labels3",
+      "label":"contains"
+    },
+    {
+      "start":"Labels3",
+      "end":"Labels4"
+    },
+    {
+      "end1":"Labels4",
+      "end2":"Labels5",
+      "label":"knows"
+    },
+    {
+      "end1":"Labels5",
+      "end2":"Labels6"
+    }
+  ],
+  "Labels1":{
+    "Name1":{
+      "property1": "lifo",
+      "property2": 13,
+      "Labels2":[
+        "office",
+        "kitchen"
+      ]
+    },
+    "Name2":{
+      "property1": "mano",
+      "property2": 26,
+      "Labels2":[
+        "bedroom",
+        "livingroom"
+      ]
+    }
+  },
+  "Labels2":{
+    "bedroom":{},
+    "balcony":{},
+    "livingroom":{},
+    "bathroom":{},
+    "office":{},
+    "hallway":{},
+    "kitchen":{ }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
