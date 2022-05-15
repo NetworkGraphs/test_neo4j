@@ -78,6 +78,9 @@ example relations labels see also `data\zigbee_optional_relations.json`
   * a list a simpler in case the relation does not have any property
   * a map is needed if relatioships do have properties. The key is then the target and the value is a map of properties (see `data\persons_mapped_relations.json` with mapped relations weight)
 
+example packed data laoding `data\zigbee_packed.json` with `data\zigbee_optional_relations.json` see `data\zigbee_relations.cyp` for generated cypher and below is the graph visualization
+
+![zigbee](./data/zigbee.png)
 # neo4j usage
 * Cypher : Graph Query Language
 * apoc : Awesome Procedures On Cypher
