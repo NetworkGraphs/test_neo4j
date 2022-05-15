@@ -1,29 +1,4 @@
 {
-  "_relationships":[
-    {
-      "start":"Labels1",
-      "end":"Labels2",
-      "label":"rel_action"
-    },
-    {
-      "start":"Labels2",
-      "end":"Labels3",
-      "label":"contains"
-    },
-    {
-      "start":"Labels3",
-      "end":"Labels4"
-    },
-    {
-      "end1":"Labels4",
-      "end2":"Labels5",
-      "label":"knows"
-    },
-    {
-      "end1":"Labels5",
-      "end2":"Labels6"
-    }
-  ],
   "Labels1":{
     "Name1":{
       "property1": "lifo",
@@ -52,16 +27,3 @@
     "kitchen":{ }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

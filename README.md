@@ -1,9 +1,88 @@
-# neo4j
+# json to cypher
+* graph data formats : comparing multiple representations formats of the same graph, cypher offers an impressively compact and comprehensible notation. Unfortunately, cypher is a domain specific language, therfore automated import and export requires a native json format that offers generic hierarchical maps of lists.
+Therefore, the goal is to provide utilities that can convers multiple json formats that are conetnt agnostic into cypher.
+* native data structures : Applications usually do know the relations between the data structures therefore tend to optimize the data export and do not embed explicit relations in the data structures, that results in a more packed data than if an explicit list of nodes and edges has to be created.
+
+![json formats](./json%20formats.svg)
+
+* jsonl : json lines is very effitient when it comes to scale as every line can be processed separately without loasing the whole file in memory, such scale is outside of scope of this repo that targets applications that fit and can be processed in memory.
+* neo4j ids : althoug neo4j db has a unique id among all Lebel types, within the export, every Label has its own id scope, therefore when referencing a target within edges, the label has to be provided as well.
+* no ids : json data exchanged between applications should not contain app specific number ids because the import or append in an existing database will require assignment of new ids. Additionally, data created manually by users or other apps requires an additional effort to add those ids.
+* unique ids : The scope of these loading utilities is to deal with data where all members of every group can be uniquely identified with one of their properties that is human comprehensible such as name. If such a restriction is not possible, then a custom cypher will have to be written and automated json load cannot be used without given uids. Note that the  name is used by neo4j as a Label (Text visualization) neo4j reserves the Label for the type and uses name instead.
+* uid maps, no lists : every group of data should be structured in a map, not a list, where the uid is used as a key
+* Labels are the terms used by neo4j for node types. inported data will not take advantage of multi typing capabilities of neo4j. Fallback on a single type allows to pack all data of the same type in a map where the key is the type of the nodes
+
+examples of `Packed json` : see `data\packed.json` and `data\zigbee_packed.json`
+```json
+{
+    "Persons":{
+        "Michael":{
+            "age": 41,
+            "Persons":[
+                "Selina",
+                "Rana",
+                "Selma"
+            ]
+        },
+        "Selina":{},
+        "Rana":{},
+        "Selma":{}
+    }
+}
+```
+
+examples of `Mapped relations json` : see `data\persons_mapped_relations.json` and `data\programmers_mapped_relations.json`
+
+```json
+{
+    "Persons":{
+        "Michael":{
+            "age": 41,
+            "knows":{
+                "Persons":[
+                    "Selina",
+                    "Rana",
+                    "Selma"
+                ],
+            },
+            "children":{
+                "Persons":[
+                    "Rana",
+                    "Selma"
+                ]
+            }
+        },
+        "Selina":{},
+        "Rana":{},
+        "Selma":{}
+    }
+}
+```
+
+## Packed vs mapped relations
+* a `packed json` has minimal footprint and prevents redundancies as names of relations are usually not needed or known by the application using the data
+* a `mapped relations` is fully informative with regards to the relationship type, as it adds an extra step of grouping all relationship tapes in a map with the relationship Label as the key
+* a `packed json` can hava an optional file separate from the main data that Labels the relationships depending on the source and target
+
+example relations labels see also `data\zigbee_optional_relations.json`
+```json
+{
+  "Persons":{
+    "Persons":"knows"
+  }
+}
+```
+* only a `mapped relations` allows to have different relationship types between the same node types
+* a combination of both `packed json` and `mapped relations` is possible with automated identification depending on the property type (list, map) and its availability in the top node Types map.
+* both `packed json` and `mapped relations` can have target relation items as either a list of a map
+  * a list a simpler in case the relation does not have any property
+  * a map is needed if relatioships do have properties. The key is then the target and the value is a map of properties (see `data\persons_mapped_relations.json` with mapped relations weight)
+
+# neo4j usage
 * Cypher : Graph Query Language
 * apoc : Awesome Procedures On Cypher
 * gds : Graph Data Science
-## note
-Please refer to the official links for latest documentation, this repo is only a sort of cheat sheet and contains history of commands I tested
+
 # run
 - docker: simply run `./run.sh` which content is
 ```shell
