@@ -74,9 +74,9 @@ example relations labels see also `data\zigbee_optional_relations.json`
 ```
 * only a `mapped relations` allows to have different relationship types between the same node types
 * a combination of both `packed json` and `mapped relations` is possible with automated identification depending on the property type (list, map) and its availability in the top node Types map.
-* both `packed json` and `mapped relations` can have target relation items as either a list of a map
-  * a list a simpler in case the relation does not have any property
-  * a map is needed if relatioships do have properties. The key is then the target and the value is a map of properties (see `data\persons_mapped_relations.json` with mapped relations weight)
+* both `packed json` and `mapped relations` can have target relation items as either a list or a map
+  * a list is simpler in case the relation does not have any property
+  * a map is needed if relatioships have properties. The key is then the target and the value is a map of relationship properties (see `data\persons_mapped_relations.json` with mapped relations weight)
 
 example packed data laoding `data\zigbee_packed.json` with `data\zigbee_optional_relations.json` see `data\zigbee_relations.cyp` for generated cypher and below is the graph visualization
 
