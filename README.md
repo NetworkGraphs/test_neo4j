@@ -1,6 +1,6 @@
 # json to cypher
 * graph data formats : comparing multiple representations formats of the same graph, cypher offers an impressively compact and comprehensible notation. Unfortunately, cypher is a domain specific language, therfore automated import and export requires a native json format that offers generic hierarchical maps of lists.
-Therefore, the goal is to provide utilities that can convers multiple json formats that are conetnt agnostic into cypher.
+The goal is then to provide utilities that can convers multiple json formats that are conetnt agnostic into cypher.
 * native data structures : Applications usually do know the relations between the data structures therefore tend to optimize the data export and do not embed explicit relations in the data structures, that results in a more packed data than if an explicit list of nodes and edges has to be created.
 
 ![json formats](./json%20formats.svg)
