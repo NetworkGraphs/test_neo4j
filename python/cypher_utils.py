@@ -92,9 +92,21 @@ def stringify_relations(name,node,packed_json):
             for target in prop_val:
                 relations += f"\n (`{name}`)-[:relatesto]->(`{target}`),"
     return relations
-    
 
-def json_packed_to_cypher(packed_json):
+def stringify_relations_map(source,Label1,node,packed_json,relations_map):
+    relations_cypher = ""
+    for Label2,prop_val in node.items():
+        if(Label2 in packed_json):
+            assert(isinstance(prop_val,list))
+            for target in prop_val:
+                rel = "relatesto"
+                #print(f"{Label1} => {Label2}")
+                if(Label1 in relations_map) and (Label2 in relations_map[Label1]):
+                    rel = relations_map[Label1][Label2]
+                relations_cypher += f"\n (`{source}`)-[:{rel}]->(`{target}`),"
+    return relations_cypher
+
+def json_packed_to_cypher(packed_json,relations_map=None):
     cmd = "CREATE "
     #Nodes
     for Label,Labels_map in packed_json.items():
@@ -104,6 +116,9 @@ def json_packed_to_cypher(packed_json):
     #Relationships
     for Label,Labels_map in packed_json.items():
         for name,node in Labels_map.items():
-            cmd += stringify_relations(name,node,packed_json)
+            if(relations_map is not None):
+                cmd += stringify_relations_map(name,Label,node,packed_json,relations_map)
+            else:
+                cmd += stringify_relations(name,node,packed_json)
     cmd = cmd[:-1]+";"
     return cmd

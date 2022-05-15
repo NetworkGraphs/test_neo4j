@@ -28,8 +28,8 @@ http://localhost:7474/browser/
 
 - jupyter lab : should be run from the `python` folder as it is referencing file paths
 ```shell
-$ source venv/bin/activate
 $ cd python
+$ source venv/bin/activate
 python$ jupyter lab
 ```
 then open the provided url with the tocken in the browser
@@ -41,6 +41,7 @@ http://localhost:8888/lab?token=9a94cxxxxxxxxxxxd85b002fxxxxxxxxxxxx
 - install VSCode plugin `JSON Lines`
 - install python environment
 ```shell
+cd python
 sudo apt install python3.8-venv
 sudo apt install python3-pip
 python3 -m venv venv

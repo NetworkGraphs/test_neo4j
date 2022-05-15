@@ -1,0 +1,8 @@
+{
+  "Coordinators":{
+    "Devices":"coordinates"
+  },
+  "Rooms":{
+      "Devices":"contains"
+    }
+}
