@@ -3,4 +3,3 @@ neo4j
 pandas
 numpy
 jupyterlab
-py2neo
